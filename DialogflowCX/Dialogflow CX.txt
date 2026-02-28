@@ -1,0 +1,31 @@
+
+https://docs.cloud.google.com/dialogflow/cx/docs/basics
+https://www.youtube.com/watch?v=E96x7t4PmOw
+cloud.google.com/dialogflow/cx/docs/tutorials/deploy
+
+https://partner.skills.google/course_templates/1446/documents/618227
+
+
+
+Handler Evaluation order
+https://docs.cloud.google.com/dialogflow/cx/docs/concept/handler#eval
+
+https://codelabs.developers.google.com/codelabs/dialogflow-cx-retail-agent#0
+
+Good examples (mix formal + casual):
+
+what is the status of my PR
+
+check purchase request status
+
+track my procurement request
+
+where is my PR
+
+PR status
+
+approval status of PR 12345
+
+can you tell me my PR status
+
+has my purchase request been approved

@@ -1,0 +1,19 @@
+gcloud services enable ces.googleapis.com 
+connectors.googleapis.com 
+compute.googleapis.com --project qwiklabs-gcp-04-cf4e1d3797a6
+
+gsutil mb -p qwiklabs-gcp-04-cf4e1d3797a6 -l us gs://qwiklabs-gcp-04-cf4e1d3797a6-nga-logs
+
+gcloud projects add-iam-policy-binding qwiklabs-gcp-04-cf4e1d3797a6 --member="user:student-02-c3c23b29acde@qwiklabs.net" --role="roles/ces.client"
+
+gcloud projects add-iam-policy-binding qwiklabs-gcp-04-cf4e1d3797a6 --member="user:student-02-c3c23b29acde@qwiklabs.net" --role="roles/ces.viewer"
+
+export PROJECT_NUMBER=$(gcloud projects describe qwiklabs-gcp-04-cf4e1d3797a6 --format="value(projectNumber)")
+
+gcloud projects add-iam-policy-binding qwiklabs-gcp-04-cf4e1d3797a6     --member="serviceAccount:service-208810104970@gcp-sa-ces.iam.gserviceaccount.com"     --role="roles/storage.objectCreator"
+
+gcloud projects add-iam-policy-binding qwiklabs-gcp-04-cf4e1d3797a6 --member="serviceAccount:service-208810104970@gcp-sa-ces.iam.gserviceaccount.com"     --role="roles/storage.objectUser"
+
+gcloud projects add-iam-policy-binding qwiklabs-gcp-04-cf4e1d3797a6     --member="serviceAccount:service-208810104970@gcp-sa-ces.iam.gserviceaccount.com"     --role="roles/storage.folderAdmin"
+
+gcloud projects add-iam-policy-binding qwiklabs-gcp-04-cf4e1d3797a6     --member="serviceAccount:service-208810104970@gcp-sa-ces.iam.gserviceaccount.com"     --role="roles/discoveryengine.user"
